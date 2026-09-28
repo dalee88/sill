@@ -1,0 +1,96 @@
+/* Sill's public pages: support and privacy. The same calm neutrals as the app (src/styles/tokens.css). */
+:root {
+  --bg: #fbfaf8;
+  --text: #2a2926;
+  --muted: #6b6862;
+  --rule: #e7e4de;
+  --link: #2a2926;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1f1f1d;
+    --text: #eceae5;
+    --muted: #a19e97;
+    --rule: #3a3936;
+    --link: #eceae5;
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 64px 20px 96px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+header img {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+h2 {
+  margin: 40px 0 8px;
+  font-size: 20px;
+}
+
+p,
+ul {
+  margin: 0 0 16px;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 15px;
+}
